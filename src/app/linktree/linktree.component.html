@@ -1,0 +1,131 @@
+<!-- Canvas de particules en arrière-plan -->
+<canvas #particlesCanvas id="particles-canvas"></canvas>
+
+<!-- Carte principale Open World Visa -->
+<div class="visa-linktree">
+
+  <!-- En-tête de l'entreprise -->
+  <div class="company-header">
+    <div class="logo-icon">
+      <i class="fas fa-globe-americas"></i>
+    </div>
+    <h1>OPEN WORLD VISA</h1>
+    <div class="tagline">
+      <i class="fas fa-compass"></i> your bridge to global education
+    </div>
+  </div>
+
+  <!-- Navigation transparente -->
+  <div class="transparent-nav">
+    <button
+      class="nav-item"
+      [class.active]="activeSection === 'official'"
+      (click)="setSection('official')">
+      <i class="fas fa-link"></i> official
+    </button>
+    <button
+      class="nav-item"
+      [class.active]="activeSection === 'orientation'"
+      (click)="setSection('orientation')">
+      <i class="fas fa-graduation-cap"></i> study & orient
+    </button>
+  </div>
+
+  <!-- SECTION OFFICIELLE (Facebook & YouTube) -->
+  <div class="section" [class.hidden]="activeSection !== 'official'">
+    <div class="links-grid">
+      <!-- Carte YouTube -->
+      <a class="visa-card" [href]="youtubeUrl" target="_blank" rel="noopener">
+        <div class="card-content">
+          <i class="fab fa-youtube youtube-icon"></i>
+          <div class="info">
+            <h3>YouTube</h3>
+            <p><i class="fas fa-link"></i> @experiences.de_vie</p>
+          </div>
+        </div>
+        <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+      <!-- Carte Instagram -->
+      <a class="visa-card" [href]="instagramUrl" target="_blank" rel="noopener">
+        <div class="card-content">
+          <i class="fab fa-instagram instagram-icon"></i>
+          <div class="info">
+            <h3>Instagram</h3>
+            <p><i class="fas fa-link"></i> @study.ineurop</p>
+          </div>
+        </div>
+        <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+
+      <!-- Carte Facebook -->
+      <a class="visa-card" [href]="facebookUrl" target="_blank" rel="noopener">
+        <div class="card-content">
+          <i class="fab fa-facebook facebook-icon"></i>
+          <div class="info">
+            <h3>Facebook</h3>
+            <p><i class="fas fa-link"></i> /openworldvisa</p>
+          </div>
+        </div>
+        <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+      <!-- Site Web -->
+      <a class="visa-card" [href]="siteUrl" target="_blank" rel="noopener">
+        <div class="card-content">
+          <i class="fas fa-globe website-icon"></i>
+          <div class="info">
+            <h3>Site Web</h3>
+            <p><i class="fas fa-link"></i> openwworldvisa.com</p>
+          </div>
+        </div>
+        <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+
+
+
+
+
+
+
+  <!-- SECTION ORIENTATION (deux surfaces séparées) -->
+  <div class="section" [class.hidden]="activeSection !== 'orientation'">
+    <div class="orientation-grid">
+
+      <!-- Première surface : Study pathways -->
+      <div class="study-card">
+        <div class="study-title">
+          <i class="fas fa-book-open"></i>
+          <span>study pathways</span>
+        </div>
+        <div class="study-desc">
+          <i class="fas fa-caret-right"></i>
+          university placement, academic orientation, and course selection.
+        </div>
+        <div class="orientation-badge">
+          <span class="badge-pill"><i class="fas fa-graduation-cap"></i> 80+ partners</span>
+          <span class="badge-pill"><i class="fas fa-language"></i> language prep</span>
+        </div>
+      </div>
+
+      <!-- Deuxième surface : Orientation & integration -->
+      <div class="study-card">
+        <div class="study-title">
+          <i class="fas fa-route"></i>
+          <span>orientation & integration</span>
+        </div>
+        <div class="study-desc">
+          ⚡ pre‑departure briefings, cultural adaptation, accommodation.
+        </div>
+        <div class="orientation-badge">
+          <span class="badge-pill"><i class="fas fa-hands-helping"></i> buddy program</span>
+          <span class="badge-pill"><i class="fas fa-city"></i> housing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="global-footer">
+    <span><i class="far fa-copyright"></i> {{ currentYear }} openworldvisa</span>
+    <span><i class="fas fa-compass"></i> study · orientation</span>
+  </div>
+</div>
